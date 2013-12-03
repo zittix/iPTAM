@@ -15,7 +15,6 @@
 		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		4E350019184E2C6F00332CBF /* MainWindow_old.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E350018184E2C6F00332CBF /* MainWindow_old.xib */; };
 		4EB7B0A8184E2ED70036BBE1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7B0A7184E2ED70036BBE1 /* MainWindow.xib */; };
 		AFD7180111AD99FA00C83845 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD717FF11AD99FA00C83845 /* Icon-Small.png */; };
 		AFD7180211AD99FA00C83845 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD7180011AD99FA00C83845 /* Icon.png */; };
@@ -75,7 +74,6 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* xPTAM_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xPTAM_Prefix.pch; sourceTree = "<group>"; };
-		4E350018184E2C6F00332CBF /* MainWindow_old.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_old.xib; sourceTree = "<group>"; };
 		4EB7B0A7184E2ED70036BBE1 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* xPTAM-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "xPTAM-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		AFD717FF11AD99FA00C83845 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				4EB7B0A7184E2ED70036BBE1 /* MainWindow.xib */,
-				4E350018184E2C6F00332CBF /* MainWindow_old.xib */,
 				32CA4F630368D1EE00C91783 /* xPTAM_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -566,7 +563,6 @@
 				AFD7180111AD99FA00C83845 /* Icon-Small.png in Resources */,
 				4EB7B0A8184E2ED70036BBE1 /* MainWindow.xib in Resources */,
 				AFD7180211AD99FA00C83845 /* Icon.png in Resources */,
-				4E350019184E2C6F00332CBF /* MainWindow_old.xib in Resources */,
 				AFD7181A11AD9B6100C83845 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
