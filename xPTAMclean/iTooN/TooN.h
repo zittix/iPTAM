@@ -303,14 +303,14 @@ namespace TooN {
 	typedef TOON_DEFAULT_PRECISION DefaultPrecision;
 #endif
 }
-
+#include "internal/debug.hh"
 #include "internal/dchecktest.hh"
 #include "internal/allocator.hh"
 
 #include "internal/size_mismatch.hh"
 #include "internal/overfill_error.hh"
 #include "internal/slice_error.hh"
-#include "internal/debug.hh"
+
 
 #include "internal/comma.hh"
 

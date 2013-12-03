@@ -87,7 +87,7 @@ namespace Internal
 {
 	struct BadSize;
 }
-
+/*
 template<int Size1, int Size2>
 struct SizeMismatch_
 {
@@ -100,7 +100,7 @@ struct SizeMismatch_
 		#endif
 	}
 };
-
+*/
 template<int Size1, int Size2>
 struct SizeMismatch
 {
