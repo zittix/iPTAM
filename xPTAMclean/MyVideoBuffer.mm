@@ -27,7 +27,7 @@ GLint abh;
 
 - (IBAction) pressButton {
 	NSLog(@"Pressed screen");
-		ptam.SendTrackerStartSig();
+		//ptam.SendTrackerStartSig();
 }
 
 -(id) init
@@ -219,7 +219,7 @@ CVD::Image<CVD::byte> mimFrameBW;
 	}
 	else
 		if (skippedFrames++%SKIP==0){
-			ptam.RunOneFrame(bwImage,m_textureHandle);
+			//ptam.RunOneFrame(bwImage,m_textureHandle);
 
 			//[self renderTeapot:ptam.getCurrentPose()];
 			//[self renderTeapot:pos];
