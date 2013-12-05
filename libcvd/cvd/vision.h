@@ -137,9 +137,10 @@ void halfSample(const BasicImage<T>& in, BasicImage<T>& out)
       bottom += skip;
     }
 }
-
+#ifdef __ARM_NEON__
 void halfSample(const BasicImage<byte>& in, BasicImage<byte>& out);
-
+#endif
+	
 /// subsamples an image to half its size by averaging 2x2 pixel blocks
 /// @param in input image
 /// @return The output image

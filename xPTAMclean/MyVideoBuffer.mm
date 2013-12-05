@@ -219,8 +219,9 @@ CVD::Image<CVD::byte> mimFrameBW;
 	}
 	else
 		if (skippedFrames++%SKIP==0){
-			//ptam.RunOneFrame(bwImage,m_textureHandle);
+			ptam.doOneFrame(bwImage,m_textureHandle);
 
+			
 			//[self renderTeapot:ptam.getCurrentPose()];
 			//[self renderTeapot:pos];
 			// This application only creates a single color renderbuffer which is already bound at this point.

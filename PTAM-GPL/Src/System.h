@@ -28,11 +28,9 @@ class System
 {
 public:
   System();
-  void Run();
+  void doOneFrame(unsigned char *bwImage,uint hnd);
   
 private:
-  VideoSource mVideoSource;
-  GLWindow2 mGLWindow;
   CVD::Image<CVD::Rgb<CVD::byte> > mimFrameRGB;
   CVD::Image<CVD::byte> mimFrameBW;
   
@@ -40,8 +38,8 @@ private:
   MapMaker *mpMapMaker; 
   Tracker *mpTracker; 
   ATANCamera *mpCamera;
-  ARDriver *mpARDriver;
-  MapViewer *mpMapViewer;
+  //ARDriver *mpARDriver;
+ // MapViewer *mpMapViewer;
   
   bool mbDone;
 
