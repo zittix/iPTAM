@@ -28,7 +28,7 @@ class System
 {
 public:
   System();
-  void doOneFrame(unsigned char *bwImage,uint hnd);
+	std::string doOneFrame(unsigned char *bwImage,uint hnd);
   
 private:
   CVD::Image<CVD::Rgb<CVD::byte> > mimFrameRGB;

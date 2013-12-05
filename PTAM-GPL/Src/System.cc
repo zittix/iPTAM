@@ -46,7 +46,7 @@ System::System()
   mbDone = false;
 };
 
-void System::doOneFrame(unsigned char *bwImage,uint hnd)
+std::string System::doOneFrame(unsigned char *bwImage,uint hnd)
 {
 //gvar3<int> gvnDrawMap("DrawMap", 0, HIDDEN|SILENT), gvnDrawAR("DrawAR", 0, HIDDEN|SILENT);
 
@@ -92,7 +92,7 @@ void System::doOneFrame(unsigned char *bwImage,uint hnd)
 	sCaption = mpMapViewer->GetMessageForUser();
       else*/
 	sCaption = mpTracker->GetMessageForUser();
-    
+    return sCaption;
 }
 
 

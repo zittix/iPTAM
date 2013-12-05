@@ -9,15 +9,22 @@
 #include "System.h"
 #include "teapot.h"
 
-System ptam;
+#include "GLVideoFrameAppDelegate.h"
 
-@implementation MyVideoBuffer
+#include <gvars3/instances.h>
+#include "Tracker.h"
+
+using namespace GVars3;
+
+@implementation MyVideoBuffer {
+	System *ptam;
+}
 
 @synthesize _session;
 @synthesize previousTimestamp;
 @synthesize videoFrameRate;
 @synthesize videoDimensions;
-@synthesize videoType;
+@synthesize videoType,labelStatus;
 @synthesize CameraTexture=m_textureHandle;
 
 EAGLContext *acontext;
@@ -26,8 +33,7 @@ GLint abw;
 GLint abh;
 
 - (IBAction) pressButton {
-	NSLog(@"Pressed screen");
-		//ptam.SendTrackerStartSig();
+	GUI.ParseLine("try KeyPress Space");
 }
 
 -(id) init
@@ -74,6 +80,12 @@ GLint abh;
 		//and create output Black and White image
 		bwImage = (unsigned char *)malloc(640*480*4);
 		memset(bwImage,0,640*480*4);
+		
+		
+		GUI.LoadFile([[NSBundle mainBundle] pathForResource:@"settings.cfg" ofType:@""].UTF8String);
+		
+		ptam = new System;
+
 	}
 	return self;
 }
@@ -219,8 +231,8 @@ CVD::Image<CVD::byte> mimFrameBW;
 	}
 	else
 		if (skippedFrames++%SKIP==0){
-			ptam.doOneFrame(bwImage,m_textureHandle);
-
+			std::string status = ptam->doOneFrame(bwImage,m_textureHandle);
+			((GLVideoFrameAppDelegate*)[UIApplication sharedApplication].delegate).userString.text=[NSString stringWithCString:status.c_str() encoding:NSUTF8StringEncoding];
 			
 			//[self renderTeapot:ptam.getCurrentPose()];
 			//[self renderTeapot:pos];
@@ -298,8 +310,10 @@ CVD::Image<CVD::byte> mimFrameBW;
 {
 	[_session release];
 	
-	[super dealloc];
+	delete ptam;
 	free(bwImage);
+	[labelStatus release];
+	[super dealloc];
 }
 
 @end

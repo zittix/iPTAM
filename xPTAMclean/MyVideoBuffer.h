@@ -26,6 +26,7 @@
 @property (readwrite) CMVideoCodecType videoType;
 @property (readwrite) CMTime previousTimestamp;
 @property (readwrite) uint CameraTexture;
+@property (retain, nonatomic) IBOutlet UILabel *labelStatus;
 
 - (void)	captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
 - (void)	renderCameraToSprite:(uint)text;
